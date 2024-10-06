@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="bg-zinc-950 w-screen h-screen text-white overflow-hidden ease-[cubic-bezier(.33,1.15,.49,1.44)]">
+    <div class="bg-zinc-950 w-full min-w-[100vw] h-full min-h-[100vh] text-white">
         <RouterView />
     </div>
 </template>

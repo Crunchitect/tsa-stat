@@ -2,7 +2,11 @@
 export default {
     content: ['./**/*.{html,vue}'],
     theme: {
-        extend: {},
+        extend: {
+            transitionTimingFunction: {
+                pop: 'cubic-bezier(.33,1.15,.49,1.44)',
+            },
+        },
     },
-    plugins: [],
+    plugins: [require('tailwindcss-animated')],
 };

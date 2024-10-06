@@ -14,7 +14,9 @@
     "@phosphor-icons/vue": "^2.2.1",
     "tailwindcss-animated": "^1.1.2",
     "vue": "^3.4.29",
-    "vue-router": "^4.3.3"
+    "vue-draggable-next": "^2.2.1",
+    "vue-router": "^4.3.3",
+    "vuuri": "^0.4.5"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",

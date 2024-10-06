@@ -7,6 +7,19 @@
     font-variant-ligatures: none;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 input[type=number]::-webkit-inner-spin-button {
     display: none;
+}
+
+::-webkit-scrollbar {
+    @apply bg-zinc-950 w-3 mx-3
+}
+
+/* Add a thumb */
+::-webkit-scrollbar-thumb {
+    @apply bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-900 rounded-lg
 }

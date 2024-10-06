@@ -15,13 +15,13 @@
         PoolLengthId: number;
         NationId: number;
     }>({
-        SwimmingTypeDetailId: 2,
-        GenderId: 1,
-        DistId: 1,
-        AgeMin: 0,
-        AgeMax: 109,
-        PoolLengthId: 1,
-        NationId: 1,
+        SwimmingTypeDetailId: 5,
+        GenderId: 2,
+        DistId: 3,
+        AgeMin: 12,
+        AgeMax: 13,
+        PoolLengthId: 0,
+        NationId: 0,
     });
 
     enum Status {
@@ -37,7 +37,17 @@
         const data = await fetchRankingJSON(ranking.value);
         buttonStatus.value = Status.Done;
         setTimeout(() => (buttonStatus.value = Status.Preload), 2000);
-        content.value.push(data);
+        //@ts-trust-me-bro
+        content.value.push([
+            data,
+            {
+                columns: ['Index', 'FullName', 'Time', 'Competition.Name'],
+                length: 10,
+                truncate: true,
+                charLimit: 30,
+                margins: { x: 3, y: 5 },
+            },
+        ]);
     };
 </script>
 

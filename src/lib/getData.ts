@@ -17,7 +17,7 @@ export async function fetchRankingJSON(params: { [k: string]: number }) {
             new URLSearchParams({
                 draw: '1',
                 start: '0',
-                length: '10',
+                length: '-1',
                 CompetitionEvent: JSON.stringify(formattedParams),
                 startDate: startDateFormatted,
             }).toString(),

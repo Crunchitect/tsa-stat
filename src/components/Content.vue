@@ -38,7 +38,7 @@
                 <p class="font-bold text-[1.5vw]" v-for="column in metadata.columns">
                     {{ dotCheck(ThaiRankingTranslation, column) ? dotIndex(ThaiRankingTranslation, column) : column }}
                 </p>
-                <template v-for="(_, xindex) in data.data">
+                <template v-for="(_, xindex) in data.data.slice(0, metadata.length)">
                     <p
                         v-for="column in metadata.columns"
                         class="text-[1.5vw] overflow-ellipsis"

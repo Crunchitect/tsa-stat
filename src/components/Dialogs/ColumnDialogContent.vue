@@ -38,7 +38,7 @@
             <PhPlus class="inline" /> Add Column
         </button>
         <Dialog v-model="showAddColumn" :z="99999999">
-            <AddColumnDialogContent />
+            <AddColumnDialogContent :page="page" />
         </Dialog>
     </div>
 </template>

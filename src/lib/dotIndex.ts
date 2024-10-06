@@ -19,12 +19,13 @@ export function dotCheck(obj: { [k: string | number | symbol]: any }, attr: stri
     return true;
 }
 
-export function dotAll(obj: { [k: string | number | symbol]: any }) {
+export function dotAll(obj: { [k: string | number | symbol]: any }, prefix: string = '') {
     const keys: string[] = [];
-    Object.keys(obj).forEach((key) => keys.push(key));
+    Object.keys(obj).forEach((key) => keys.push(prefix + key));
     for (const key in obj) {
         if (typeof obj[key] === 'object' && obj[key] !== null) {
-            dotAll(obj[key]).forEach((xkey) => keys.push(xkey));
+            keys.splice(keys.indexOf(prefix + key));
+            dotAll(obj[key], key + '.').forEach((xkey) => keys.push(prefix + xkey));
         }
     }
     return keys;

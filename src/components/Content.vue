@@ -4,11 +4,13 @@
     import Dialog from './Dialog.vue';
     import AddDialogContent from './Dialogs/AddDialogContent.vue';
     import ColumnDialogContent from './Dialogs/ColumnDialogContent.vue';
+    import RowDialogContent from './Dialogs/RowDialogContent.vue';
     import { content, ThaiRankingTranslation } from '@/data/content';
     import { dotCheck, dotIndex } from '@/lib/dotIndex';
 
     const showAddDialog = ref(false);
     const showColumnDialog = ref(false);
+    const showRowsDialog = ref(false);
     const columnIndex = ref(0);
 
     const removeContent = (index: number) => {
@@ -66,6 +68,17 @@
                     <PhPlus />
                 </button>
             </div>
+            <button
+                class="right-4 bottom-4 absolute bg-zinc-600 hover:bg-zinc-500 p-2 rounded"
+                @click="
+                    () => {
+                        showRowsDialog = true;
+                        columnIndex = index;
+                    }
+                "
+            >
+                <PhPlus />
+            </button>
         </div>
         <KeepAlive>
             <Dialog v-model="showAddDialog">
@@ -75,6 +88,11 @@
         <KeepAlive>
             <Dialog v-model="showColumnDialog">
                 <ColumnDialogContent :page="columnIndex" />
+            </Dialog>
+        </KeepAlive>
+        <KeepAlive>
+            <Dialog v-model="showRowsDialog">
+                <RowDialogContent :page="columnIndex" />
             </Dialog>
         </KeepAlive>
     </div>

@@ -6,6 +6,10 @@ export default {
             transitionTimingFunction: {
                 pop: 'cubic-bezier(.33,1.15,.49,1.44)',
             },
+            screens: {
+                print: { raw: 'print' },
+                screen: { raw: 'screen' },
+            },
         },
     },
     plugins: [require('tailwindcss-animated')],

@@ -81,6 +81,15 @@ export const ThaiRankingTranslation = {
     Age: 'อายุ',
     ClubId: 'รหัสสโมสร',
     ClubName: 'ชื่อสโมสร',
+    FirstName: 'ชื่อ',
+    LastName: 'นามสกุล',
+    FullName: 'ชื่อ-นามสกุล',
+    UserId: 'รหัสนักกีฬา',
+    Time: 'เวลา',
+    Nation: 'สัญชาติ',
+    Prelim: 'การแข่งรอบคัดเลือก',
+    Reason: 'หมายเหตุ',
+    Index: 'ลำดับ',
     Competition: {
         OpenRegis: 'เวลาเปิดรับสมัคร',
         CloseRegis: 'เวลาปิดรับสมัคร',
@@ -94,15 +103,6 @@ export const ThaiRankingTranslation = {
         NameEn: 'การแข่งขัน (EN)',
         PoolLengthId: 'ขนาดสระ',
     },
-    FirstName: 'ชื่อ',
-    LastName: 'นามสกุล',
-    FullName: 'ชื่อ-นามสกุล',
-    UserId: 'รหัสนักกีฬา',
-    Time: 'เวลา',
-    Nation: 'สัญชาติ',
-    Prelim: 'การแข่งรอบคัดเลือก',
-    Reason: 'หมายเหตุ',
-    Index: 'ลำดับ',
 };
 
 export type RankingData = {

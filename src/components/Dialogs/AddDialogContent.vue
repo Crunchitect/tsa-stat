@@ -41,7 +41,7 @@
         content.value.push([
             data,
             {
-                columns: ['Index', 'FullName', 'Time', 'Competition.Name'],
+                columns: ['Index', 'FullName', 'Time', 'ClubName'],
                 length: 10,
                 truncate: true,
                 charLimit: 30,

@@ -24,7 +24,7 @@ export function dotAll(obj: { [k: string | number | symbol]: any }, prefix: stri
     Object.keys(obj).forEach((key) => keys.push(prefix + key));
     for (const key in obj) {
         if (typeof obj[key] === 'object' && obj[key] !== null) {
-            keys.splice(keys.indexOf(prefix + key));
+            keys.splice(keys.indexOf(prefix + key), 1);
             dotAll(obj[key], key + '.').forEach((xkey) => keys.push(prefix + xkey));
         }
     }

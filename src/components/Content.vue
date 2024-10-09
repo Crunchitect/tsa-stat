@@ -42,7 +42,7 @@
                 <PhPrinter /> Print
             </button>
         </div>
-        <div class="screen:flex screen:justify-center screen:w-full" ref="printContent">
+        <div class="screen:flex screen:flex-col screen:items-center screen:gap-4 screen:w-full" ref="printContent">
             <div
                 class="relative flex justify-center bg-white rounded print:rounded-none w-4/5 print:w-[21cm] print:h-[29.7cm] overflow-hidden aspect-[21/29.7]"
                 v-for="([data, metadata], index) in content"

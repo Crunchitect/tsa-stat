@@ -59,13 +59,17 @@
                             dotCheck(ThaiRankingTranslation, column) ? dotIndex(ThaiRankingTranslation, column) : column
                         }}
                     </p>
-                    <template v-for="(_, xindex) in data.data.slice(0, metadata.length)">
+                    <template v-for="(_, xindex) in data.data.slice(metadata.start - 1, metadata.end)">
                         <p
                             v-for="column in metadata.columns"
                             class="text-[2.5vw] overflow-ellipsis"
                             :style="{ maxWidth: `${metadata.charLimit * 1.5}vw`, WebkitLineClamp: '1' }"
                         >
-                            {{ column == 'Index' ? xindex + 1 : dotIndex(data.data[xindex], column) ?? '-' }}
+                            {{
+                                column == 'Index'
+                                    ? xindex + metadata.start
+                                    : dotIndex(data.data[xindex + metadata.start], column) ?? '-'
+                            }}
                         </p>
                     </template>
                 </div>

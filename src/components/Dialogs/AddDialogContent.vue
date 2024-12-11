@@ -42,7 +42,8 @@
             data,
             {
                 columns: ['Index', 'FullName', 'Time', 'ClubName'],
-                length: 10,
+                start: 1,
+                end: 10,
                 truncate: true,
                 charLimit: 30,
                 margins: { x: 3, y: 5 },
@@ -170,7 +171,7 @@
             </div>
             <button
                 @click="addRankingPage"
-                class="bg-zinc-600 hover:bg-zinc-400 active:bg-zinc-800 hover:scale-110 active:scale-90 p-2 rounded w-full text-center transition-all"
+                class="bg-zinc-600 hover:bg-zinc-400 active:bg-zinc-800 p-2 rounded w-full text-center transition-all hover:scale-110 active:scale-90"
             >
                 <span v-if="buttonStatus == Status.Preload"> <PhGridNine class="inline" /> Create Stat Sheet </span>
                 <span v-if="buttonStatus == Status.Loading">

@@ -163,7 +163,8 @@ export type RankingData = {
 
 export type Metadata = {
     columns: string[];
-    length: number;
+    start: number;
+    end: number;
     truncate: boolean;
     charLimit: number;
     margins: {

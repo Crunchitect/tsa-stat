@@ -13,7 +13,7 @@ export async function fetchRankingJSON(params: { [k: string]: number }) {
         formattedParams[key] = params[key].toString();
     }
     const slug = await fetch(
-        'http://swimming.or.th/Index/CheckRank?' +
+        'http://thaiaquatics.or.th/Index/CheckRank?' +
             new URLSearchParams({
                 draw: '1',
                 start: '0',
